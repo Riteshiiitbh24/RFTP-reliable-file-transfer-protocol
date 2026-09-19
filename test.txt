@@ -1,0 +1,12 @@
+Client
+The client initiates the file transfer to the server using UDP.
+It divides the file into smaller data packets.
+Each packet contains a custom header with sequence number, type, length, and checksum.
+The packets are sent to the server's IP address and port.
+A FIN packet is sent at the end to indicate that the transfer is complete.
+Server
+The server listens for incoming UDP packets on a specified IP address and port.
+It receives each packet and extracts the 9-byte custom header.
+It identifies DATA and FIN packets using the packet type.
+Data from DATA packets is extracted and written to the output file.
+When a FIN packet is received, the server considers the file transfer complete.
