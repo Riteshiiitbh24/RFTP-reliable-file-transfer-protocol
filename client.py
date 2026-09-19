@@ -73,5 +73,5 @@ def send_file(filename):
             pass
 
 if __name__ == "__main__":
-    send_file("test.txt")
+    send_file("inversion.jpeg")
     client_socket.close()
