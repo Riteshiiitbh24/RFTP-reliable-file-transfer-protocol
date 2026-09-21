@@ -56,5 +56,5 @@ def receive_file(output_filename):
                         server_socket.sendto(struct.pack(HEADER_FORMAT, expected_seq - 1, 1, 0, 0), addr)
 
 if __name__ == "__main__":
-    receive_file("received_inversion.jpeg")
+    receive_file("results/received_test.txt")
     server_socket.close()
